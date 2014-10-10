@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -38,24 +38,24 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="WorldWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityCell" rowHeight="120" id="WCw-Qf-5nD">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityCell" rowHeight="120" id="WCw-Qf-5nD" customClass="CityTableViewCell" customModule="WorldWeather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bangkok" translatesAutoresizingMaskIntoConstraints="NO" id="Z6J-qq-omb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Bangkok" translatesAutoresizingMaskIntoConstraints="NO" id="8UB-DM-aD6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rym-LM-hol">
-                                            <rect key="frame" x="48" y="48" width="264" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CityName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ch-bz-RBV">
+                                            <rect key="frame" x="48" y="48" width="544" height="23"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                             <color key="textColor" red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,19 +63,21 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rym-LM-hol" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" constant="40" id="BW7-P1-iKT"/>
-                                        <constraint firstItem="rym-LM-hol" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" constant="40" id="E6h-uL-ph3"/>
-                                        <constraint firstItem="Z6J-qq-omb" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" id="H75-sq-gRf"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="rym-LM-hol" secondAttribute="trailing" id="LaC-I0-0zM"/>
-                                        <constraint firstItem="Z6J-qq-omb" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" id="NAG-x1-l4M"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rym-LM-hol" secondAttribute="bottom" constant="40" id="abS-6o-1Gt"/>
-                                        <constraint firstAttribute="trailing" secondItem="Z6J-qq-omb" secondAttribute="trailing" id="c6E-43-Mm3"/>
-                                        <constraint firstAttribute="bottom" secondItem="Z6J-qq-omb" secondAttribute="bottom" id="vzd-9E-Z6G"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3Ch-bz-RBV" secondAttribute="trailing" id="Fr5-6D-lWx"/>
+                                        <constraint firstAttribute="trailing" secondItem="8UB-DM-aD6" secondAttribute="trailing" id="JOn-Ns-ro1"/>
+                                        <constraint firstAttribute="bottom" secondItem="8UB-DM-aD6" secondAttribute="bottom" id="Laa-u5-enW"/>
+                                        <constraint firstItem="8UB-DM-aD6" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" id="Ly3-Hd-JXY"/>
+                                        <constraint firstItem="3Ch-bz-RBV" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" constant="40" id="Q4l-eL-nKt"/>
+                                        <constraint firstItem="3Ch-bz-RBV" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" constant="40" id="gWs-Xq-qnr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3Ch-bz-RBV" secondAttribute="bottom" constant="40" id="gYK-dm-kem"/>
+                                        <constraint firstItem="8UB-DM-aD6" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" id="zed-mF-raj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="push" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <outlet property="cityImageView" destination="8UB-DM-aD6" id="Ohd-bc-s5c"/>
+                                    <outlet property="cityNameLabel" destination="3Ch-bz-RBV" id="KaC-EG-rx3"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,7 +91,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-758"/>
+            <point key="canvasLocation" x="514" y="-758"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -109,20 +111,20 @@
         <!--Weather Detail View-->
         <scene sceneID="tnr-cA-B7n">
             <objects>
-                <viewController id="Aj2-LP-3Wb" userLabel="Weather Detail View" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="Aj2-LP-3Wb" userLabel="Weather Detail View" customClass="DetailViewController" customModule="WorldWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aXk-Lh-Qsu"/>
                         <viewControllerLayoutGuide type="bottom" id="Sck-rq-iao"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bZo-YB-oiO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="qCX-0F-iyL" userLabel="WeatherIcon">
-                                <rect key="frame" x="150" y="80" width="300" height="144"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="qCX-0F-iyL" userLabel="WeatherIcon">
+                                <rect key="frame" x="150" y="80" width="300" height="180"/>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rA0-ah-elM" userLabel="WeatherTextContainer">
-                                <rect key="frame" x="0.0" y="522" width="600" height="330"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rA0-ah-elM" userLabel="WeatherTextContainer">
+                                <rect key="frame" x="0.0" y="270" width="600" height="330"/>
                                 <connections>
                                     <segue destination="0BJ-Ov-1Iw" kind="embed" id="liD-T6-LYI"/>
                                 </connections>
@@ -130,7 +132,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.35686275360000003" green="0.73725491759999995" blue="0.98823535439999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="qCX-0F-iyL" firstAttribute="leading" secondItem="bZo-YB-oiO" secondAttribute="leading" id="4ds-hg-3Vk"/>
+                            <constraint firstItem="qCX-0F-iyL" firstAttribute="leading" secondItem="bZo-YB-oiO" secondAttribute="leading" id="4ds-hg-3Vk">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="qCX-0F-iyL" secondAttribute="centerX" id="51W-Ai-GfP"/>
                             <constraint firstItem="rA0-ah-elM" firstAttribute="height" secondItem="bZo-YB-oiO" secondAttribute="height" multiplier="0.55" id="AaM-O7-Jmx"/>
                             <constraint firstAttribute="centerY" secondItem="qCX-0F-iyL" secondAttribute="centerY" id="Eya-BN-EHl"/>
@@ -143,6 +147,29 @@
                             <constraint firstAttribute="trailing" secondItem="rA0-ah-elM" secondAttribute="trailing" id="o27-ir-hVT"/>
                             <constraint firstItem="qCX-0F-iyL" firstAttribute="height" relation="lessThanOrEqual" secondItem="bZo-YB-oiO" secondAttribute="height" multiplier="0.3" id="tpX-fh-F4K"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4ds-hg-3Vk"/>
+                                <exclude reference="Eya-BN-EHl"/>
+                                <exclude reference="UV5-Fy-7sT"/>
+                                <exclude reference="GtK-hm-XG3"/>
+                                <exclude reference="ZMi-QP-Gbo"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="4ds-hg-3Vk"/>
+                                <exclude reference="51W-Ai-GfP"/>
+                                <include reference="Eya-BN-EHl"/>
+                                <exclude reference="MDJ-2f-sV5"/>
+                                <include reference="UV5-Fy-7sT"/>
+                                <exclude reference="tpX-fh-F4K"/>
+                                <exclude reference="AaM-O7-Jmx"/>
+                                <include reference="GtK-hm-XG3"/>
+                                <exclude reference="Km6-V2-CZm"/>
+                                <include reference="ZMi-QP-Gbo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="hjf-yj-xn8"/>
                     <connections>
@@ -156,7 +183,7 @@
         <!--Weather Text View-->
         <scene sceneID="aMd-rJ-9zA">
             <objects>
-                <viewController id="0BJ-Ov-1Iw" userLabel="Weather Text View" customClass="WeatherTextViewController" sceneMemberID="viewController">
+                <viewController id="0BJ-Ov-1Iw" userLabel="Weather Text View" customClass="WeatherTextViewController" customModule="WorldWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MAh-5B-xbu"/>
                         <viewControllerLayoutGuide type="bottom" id="5t0-5U-dap"/>
@@ -173,17 +200,25 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bt7-OR-lfe" userLabel="TempLabel">
                                         <rect key="frame" x="0.0" y="35" width="600" height="295"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="250"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.22101389630000001" green="0.50662462070000003" blue="0.73999521680000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="omh-zH-HAS" firstAttribute="top" secondItem="Ysq-o1-8AH" secondAttribute="top" constant="10" id="EPz-ac-c4l"/>
+                                    <constraint firstItem="omh-zH-HAS" firstAttribute="top" secondItem="Ysq-o1-8AH" secondAttribute="top" constant="10" id="EPz-ac-c4l">
+                                        <variation key="heightClass=compact" constant="30"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerX" secondItem="omh-zH-HAS" secondAttribute="centerX" id="MsH-gv-8gw"/>
                                     <constraint firstAttribute="bottom" secondItem="bt7-OR-lfe" secondAttribute="bottom" id="lPW-Zw-52J"/>
                                     <constraint firstAttribute="width" secondItem="bt7-OR-lfe" secondAttribute="width" id="nS4-QJ-WAJ"/>
@@ -213,9 +248,9 @@
         <!--Daily Weather Collection View-->
         <scene sceneID="Lsd-fp-dk7">
             <objects>
-                <collectionViewController storyboardIdentifier="dailyWeatherCollectionView" id="988-rV-JtB" userLabel="Daily Weather Collection View" customClass="DailyWeatherCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="dailyWeatherCollectionView" id="988-rV-JtB" userLabel="Daily Weather Collection View" customClass="DailyWeatherCollectionViewController" customModule="WorldWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yMs-tn-Vxl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.22101389630000001" green="0.50662462070000003" blue="0.73999521680000002" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="dVr-V4-e44">
@@ -225,8 +260,8 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailyWeatherCell" id="n7z-Mw-XXn" customClass="DailyWeatherCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="152" height="150"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailyWeatherCell" id="n7z-Mw-XXn" customClass="DailyWeatherCollectionViewCell" customModule="WorldWeather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="152" height="150"/>
@@ -287,11 +322,6 @@
         <image name="Bangkok" width="599" height="200"/>
         <image name="cloud" width="300" height="197"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
