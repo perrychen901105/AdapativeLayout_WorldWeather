@@ -196,10 +196,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="omh-zH-HAS" userLabel="CityLabel">
-                                        <rect key="frame" x="0.0" y="10" width="600" height="177"/>
+                                        <rect key="frame" x="0.0" y="150" width="600" height="177"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="150" width="300" height="177"/>
+                                        </variation>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
                                         </variation>
@@ -213,19 +216,54 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         </variation>
                                     </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69c-Qd-BvS">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="qSc-lg-Ipm"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="qSc-lg-Ipm"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="988-rV-JtB" kind="embed" id="l0A-BD-W8Q"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.22101389630000001" green="0.50662462070000003" blue="0.73999521680000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="omh-zH-HAS" firstAttribute="top" secondItem="69c-Qd-BvS" secondAttribute="bottom" id="Bys-l0-YZB"/>
+                                    <constraint firstItem="69c-Qd-BvS" firstAttribute="leading" secondItem="Ysq-o1-8AH" secondAttribute="leading" id="CC3-kB-2ZQ"/>
                                     <constraint firstItem="omh-zH-HAS" firstAttribute="top" secondItem="Ysq-o1-8AH" secondAttribute="top" constant="10" id="EPz-ac-c4l">
                                         <variation key="heightClass=compact" constant="30"/>
                                     </constraint>
                                     <constraint firstAttribute="centerX" secondItem="omh-zH-HAS" secondAttribute="centerX" id="MsH-gv-8gw"/>
+                                    <constraint firstItem="69c-Qd-BvS" firstAttribute="top" secondItem="Ysq-o1-8AH" secondAttribute="top" id="hHL-f0-pXU"/>
+                                    <constraint firstAttribute="trailing" secondItem="69c-Qd-BvS" secondAttribute="trailing" id="jf1-cW-6tX"/>
                                     <constraint firstAttribute="bottom" secondItem="bt7-OR-lfe" secondAttribute="bottom" id="lPW-Zw-52J"/>
                                     <constraint firstAttribute="width" secondItem="bt7-OR-lfe" secondAttribute="width" id="nS4-QJ-WAJ"/>
                                     <constraint firstItem="omh-zH-HAS" firstAttribute="width" secondItem="Ysq-o1-8AH" secondAttribute="width" id="okf-69-Io1"/>
                                     <constraint firstAttribute="centerX" secondItem="bt7-OR-lfe" secondAttribute="centerX" id="sAy-X4-8Fn"/>
                                     <constraint firstItem="omh-zH-HAS" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bt7-OR-lfe" secondAttribute="top" constant="50" id="teS-vo-IjP"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EPz-ac-c4l"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="subviews">
+                                        <exclude reference="69c-Qd-BvS"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="CC3-kB-2ZQ"/>
+                                        <exclude reference="hHL-f0-pXU"/>
+                                        <exclude reference="jf1-cW-6tX"/>
+                                        <exclude reference="Bys-l0-YZB"/>
+                                        <include reference="EPz-ac-c4l"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,14 +281,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqw-Y9-jIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="249"/>
+            <point key="canvasLocation" x="1250" y="-9"/>
         </scene>
         <!--Daily Weather Collection View-->
         <scene sceneID="Lsd-fp-dk7">
             <objects>
                 <collectionViewController storyboardIdentifier="dailyWeatherCollectionView" id="988-rV-JtB" userLabel="Daily Weather Collection View" customClass="DailyWeatherCollectionViewController" customModule="WorldWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yMs-tn-Vxl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.22101389630000001" green="0.50662462070000003" blue="0.73999521680000002" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="dVr-V4-e44">

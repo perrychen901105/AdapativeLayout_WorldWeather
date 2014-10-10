@@ -46,6 +46,9 @@ class MasterViewController: UITableViewController {
       }
     }
     self.title = "Cities"
+    
+    tableView.rowHeight = UITableViewAutomaticDimension;
+    tableView.estimatedRowHeight = 100
   }
   
   
@@ -77,6 +80,7 @@ class MasterViewController: UITableViewController {
     cell.cityWeather = city
     return cell
   }
-  
+    
+    
 }
 

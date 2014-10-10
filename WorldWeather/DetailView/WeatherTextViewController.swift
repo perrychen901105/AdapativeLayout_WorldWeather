@@ -38,6 +38,7 @@ class WeatherTextViewController: UIViewController, CityWeatherContainer {
   didSet {
     if isViewLoaded() {
       configureView()
+        provideDataToChildViewControllers()
     }
   }
   }
@@ -56,4 +57,15 @@ class WeatherTextViewController: UIViewController, CityWeatherContainer {
       temperatureLabel.text = "\(cityWeather.weather[0].status.temperature)"
     }
   }
+    
+    private func provideDataToChildViewControllers() {
+        for vc in childViewControllers {
+            if let weeklyWeatherContainer = vc as? WeeklyWeatherContainer
+            {
+                if let weeklyWeather = cityWeather?.weather {
+                    weeklyWeatherContainer.dailyWeather = weeklyWeather
+                }
+            }
+        }
+    }
 }
